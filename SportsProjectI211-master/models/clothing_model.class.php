@@ -43,13 +43,13 @@ class ClothingModel {// start of ClothingModel class.
 
         //loop through results
         while ($obj = $query->fetch_object()) {
-            $clothes = new Clothing(stripslashes($obj->sport), stripslashes($obj->name),stripslashes($obj->price),stripslashes($obj->stock),stripslashes($obj->description),stripslashes($obj->image)) ;
+            $clothing = new Clothing(stripslashes($obj->sport), stripslashes($obj->name),stripslashes($obj->price),stripslashes($obj->stock),stripslashes($obj->description),stripslashes($obj->image)) ;
 
             //set id for movie
-            $clothes->setId($obj->id);
+            $clothing->setId($obj->id);
 
             //add to clothes array
-            $clothes[] = $clothes;
+            $clothes[] = $clothing;
         }
         return $clothes;
     }
