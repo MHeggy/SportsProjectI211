@@ -29,7 +29,7 @@ class UserController {// start of UserController class.
 
         if ($registrationResult) {
             // Registration was successful.
-            $registrationView = new Register();
+            $registrationView = new RegisterConfirm();
             $registrationView->display();
         } else {
             // Registration failed.
